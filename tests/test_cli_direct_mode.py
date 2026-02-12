@@ -243,19 +243,19 @@ class TestPostBody:
 
 
 class TestNoArgs:
-    """No arguments shows help and exits non-zero."""
+    """No arguments shows help and exits cleanly."""
 
     def test_shows_help(self, runner, tmp_path, global_reqcap_dir):
         os.chdir(tmp_path)
         result = runner.invoke(main, [])
-        assert result.exit_code != 0
+        assert result.exit_code == 0
         # Help text includes mode descriptions
         assert "MODES" in result.output or "Direct" in result.output
 
-    def test_exit_code_1(self, runner, tmp_path, global_reqcap_dir):
+    def test_exit_code_0(self, runner, tmp_path, global_reqcap_dir):
         os.chdir(tmp_path)
         result = runner.invoke(main, [])
-        assert result.exit_code == 1
+        assert result.exit_code == 0
 
 
 # ── Scenario 22: Timeout ─────────────────────────────────────────────────

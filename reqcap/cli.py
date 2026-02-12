@@ -283,6 +283,7 @@ HISTORY
     help=TOOL_HELP,
     context_settings={"max_content_width": 88},
 )
+@click.version_option(package_name="reqcap")
 @click.argument("method", required=False)
 @click.argument("url", required=False)
 @click.option(
@@ -650,7 +651,7 @@ def main(
     # Nothing matched — show help
     ctx = click.get_current_context()
     click.echo(ctx.get_help())
-    ctx.exit(1)
+    ctx.exit(0)
 
 
 # ── Subcommand implementations ──────────────────────────────────────────
