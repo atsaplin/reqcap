@@ -1,5 +1,10 @@
 # reqcap
 
+[![CI](https://github.com/atsaplin/reqcap/actions/workflows/ci.yml/badge.svg)](https://github.com/atsaplin/reqcap/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/reqcap)](https://pypi.org/project/reqcap/)
+[![Python](https://img.shields.io/pypi/pyversions/reqcap)](https://pypi.org/project/reqcap/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Minimal HTTP client that returns only what you need — status, timing, and the specific JSON fields you ask for. Run templates, save snapshots, test your features e2e quickly. 
 
 > [!NOTE]
