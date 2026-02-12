@@ -1,0 +1,22 @@
+# reqcap configuration
+# Place as .reqcap.yaml in your project root, or pass via --config
+# For global defaults, place at ~/.reqcap/config.yaml
+# Templates are separate files — see templates/ directory.
+# templates_dir is resolved relative to this config file's location.
+
+defaults:
+  base_url: ${API_BASE_URL}
+  env_file: .env
+  timeout: 30
+  templates_dir: templates          # where to find template .yaml files
+  snapshots_dir: snapshots          # where to save/load response snapshots
+  headers:
+    Content-Type: application/json
+  auth:
+    type: bearer
+    token: ${API_TOKEN}
+  # Default response filter - minimizes token output for AI agents
+  filter:
+    status: true
+    headers: false
+    body_fields: []  # empty = show full body

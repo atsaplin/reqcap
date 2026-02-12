@@ -1,0 +1,14 @@
+name: post-data
+description: Post JSON data and inspect the echo
+method: POST
+url: /post
+body:
+  name: ""
+  email: ""
+fields:
+  - name: name
+    path: name
+  - name: email
+    path: email
+filter:
+  body_fields: [json, url]

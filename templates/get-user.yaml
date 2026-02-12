@@ -1,0 +1,5 @@
+description: Get user by ID
+url: "/api/users/{{user_id}}"
+method: GET
+filter:
+  body_fields: [id, name, email, role]

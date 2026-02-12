@@ -1,0 +1,10 @@
+name: get-with-origin
+description: Fetch /get with origin from a prior get-ip call
+depends:
+  - get-ip
+method: GET
+url: /get
+headers:
+  X-My-Origin: "{{origin}}"
+filter:
+  body_fields: [headers, url]

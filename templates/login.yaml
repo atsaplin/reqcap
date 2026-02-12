@@ -1,0 +1,16 @@
+description: Authenticate and get token
+url: /api/auth/login
+method: POST
+body:
+  email: ""
+  password: ""
+fields:
+  - name: email
+    path: email
+  - name: password
+    path: password
+exports:
+  token: body.access_token
+  user_id: body.user.id
+filter:
+  body_fields: [access_token, expires_in]

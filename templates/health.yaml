@@ -1,0 +1,5 @@
+description: Health check
+url: /health
+method: GET
+filter:
+  body_fields: [status, version]

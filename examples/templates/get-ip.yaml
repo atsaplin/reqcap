@@ -1,0 +1,8 @@
+name: get-ip
+description: Get your public IP address
+method: GET
+url: /ip
+exports:
+  origin: body.origin
+filter:
+  body_fields: [origin]

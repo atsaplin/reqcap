@@ -1,0 +1,14 @@
+# Example config for the examples/ directory.
+# Run examples from this folder: cd examples && reqcap ...
+
+defaults:
+  base_url: https://httpbin.org
+  timeout: 15
+  templates_dir: templates
+  snapshots_dir: snapshots
+  headers:
+    Content-Type: application/json
+  filter:
+    status: true
+    headers: false
+    body_fields: []

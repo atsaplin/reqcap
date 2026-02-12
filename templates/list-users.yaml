@@ -1,0 +1,5 @@
+description: List all users
+url: /api/users
+method: GET
+filter:
+  body_fields: ["data[].id", "data[].name", "data[].email"]

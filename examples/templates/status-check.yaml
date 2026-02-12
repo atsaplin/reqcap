@@ -1,0 +1,10 @@
+name: status-check
+description: Request a specific HTTP status code
+method: GET
+url: /status/{{code}}
+fields:
+  - name: code
+    path: code
+snapshot:
+  enabled: true
+  name: last-status-check

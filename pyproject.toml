@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reqcap"
+version = "0.1.0"
+description = "Minimal curl wrapper for AI agents - test APIs with filtered, token-efficient output"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "requests>=2.28",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "click>=8.0",
+]
+
+[project.scripts]
+reqcap = "reqcap.cli:main"
+
+[tool.setuptools.package-data]
+reqcap = ["skill_data/**"]
+
+[tool.setuptools.packages.find]
+include = ["reqcap*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.8",
+]
+
+[tool.basedpyright]
+typeCheckingMode = "basic"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 99
+exclude = ["build/"]
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes
+    "I",     # isort
+    "UP",    # pyupgrade
+    "B",     # flake8-bugbear
+    "SIM",   # flake8-simplify
+    "RUF",   # ruff-specific
+]
+ignore = [
+    "E501",  # line length handled by formatter
+    "SIM108", # ternary operator — often less readable
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["reqcap"]
+
+[tool.ruff.format]
+quote-style = "double"

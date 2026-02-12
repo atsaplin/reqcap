@@ -1,0 +1,8 @@
+name: auth-bearer
+description: Test bearer token auth (httpbin echoes headers back)
+method: GET
+url: /bearer
+exports:
+  authenticated: body.authenticated
+filter:
+  body_fields: [authenticated, token]

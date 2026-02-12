@@ -1,0 +1,26 @@
+{
+  "status_code": 200,
+  "headers": {
+    "Date": "Thu, 12 Feb 2026 20:41:13 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "347",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+  },
+  "body": {
+    "args": {},
+    "headers": {
+      "Accept": "*/*",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Host": "httpbin.org",
+      "User-Agent": "python-requests/2.32.5",
+      "X-Amzn-Trace-Id": "Root=1-698e3ae9-2a5611c84032000b62a9ec56"
+    },
+    "origin": "173.32.61.67",
+    "url": "https://httpbin.org/get"
+  },
+  "saved_at": "2026-02-12T20:41:13.228591+00:00"
+}
