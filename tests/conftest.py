@@ -50,6 +50,6 @@ def make_request_result(
     r.elapsed_ms = elapsed_ms
     r.error = error
     r.raw_text = raw_text or (
-        json.dumps(body) if isinstance(body, (dict, list)) else str(body or "")
+        json.dumps(body) if isinstance(body, dict | list) else str(body or "")
     )
     return r

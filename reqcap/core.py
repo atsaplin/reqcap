@@ -657,7 +657,7 @@ def _diff_dicts(prefix: str, old: dict, new: dict, diffs: list[str]) -> None:
 
 def _summarize(value) -> str:
     """Short string representation of a value for diff output."""
-    s = json.dumps(value) if isinstance(value, (dict, list)) else str(value)
+    s = json.dumps(value) if isinstance(value, dict | list) else str(value)
     if len(s) > 80:
         return s[:77] + "..."
     return s

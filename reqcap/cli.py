@@ -849,7 +849,7 @@ def _resolve_and_execute_deps(
 
     for dep_name in depends:
         if dep_name in visited:
-            cycle_path = " → ".join(chain + [dep_name])
+            cycle_path = " → ".join([*chain, dep_name])
             click.echo(
                 f"ERROR: Circular dependency detected: {cycle_path}",
                 err=True,

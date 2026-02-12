@@ -183,7 +183,7 @@ class TestNestedDependencies:
 
         # Execution order: get-config → login → fetch-data
         output_lines = result.output.strip().split("\n")
-        dep_lines = [l for l in output_lines if l.startswith("[dep:")]
+        dep_lines = [line for line in output_lines if line.startswith("[dep:")]
         assert len(dep_lines) == 2
         assert "get-config" in dep_lines[0]
         assert "login" in dep_lines[1]

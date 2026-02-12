@@ -69,7 +69,6 @@ class TestParseFormFields:
 class TestExecutorFormData:
     @patch("reqcap.executor.requests.request")
     def test_form_data_passed(self, mock_req, tmp_path):
-
         from reqcap.executor import execute_request
 
         mock_resp = type(

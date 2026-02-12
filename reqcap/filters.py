@@ -430,7 +430,7 @@ def format_output(
 
     if raw:
         body = result.body
-        if isinstance(body, (dict, list)):
+        if isinstance(body, dict | list):
             return json.dumps(body, indent=2)
         return str(body) if body is not None else ""
 
@@ -457,11 +457,11 @@ def format_output(
 
     body = result.body
     if body is not None:
-        if body_fields and isinstance(body, (dict, list)):
+        if body_fields and isinstance(body, dict | list):
             body = filter_response(body, body_fields)
 
         lines.append("BODY:")
-        if isinstance(body, (dict, list)):
+        if isinstance(body, dict | list):
             lines.append(json.dumps(body, indent=2))
         else:
             lines.append(str(body))

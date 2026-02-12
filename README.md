@@ -8,7 +8,7 @@
 Minimal HTTP client that returns only what you need — status, timing, and the specific JSON fields you ask for. Run templates, save snapshots, test your features e2e quickly. 
 
 > [!NOTE]
-> **Built for AI agents too.** Filtered output saves tokens, `--list-templates` lets agents discover existing test scenarios, `--diff` catches regressions, and `--install-skill` teaches Claude Code to use reqcap automatically.
+> **✨ Built for AI agents too.** Filtered output saves tokens, `--list-templates` lets agents discover existing test scenarios, `--diff` catches regressions, and `--install-skill` teaches Claude Code to use reqcap automatically.
 
 ## Why reqcap?
 
