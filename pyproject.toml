@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68.0", "wheel"]
+requires = ["setuptools>=68.0", "setuptools-scm>=8", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "reqcap"
-version = "1.0.0"
+dynamic = ["version"]
 description = "Minimal curl wrapper for AI agents - test APIs with filtered, token-efficient output"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -43,6 +43,10 @@ reqcap = ["skill_data/**"]
 
 [tool.setuptools.packages.find]
 include = ["reqcap*"]
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"
 
 [dependency-groups]
 dev = [
